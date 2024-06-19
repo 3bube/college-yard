@@ -58,7 +58,7 @@ const Onboarding = () => {
   return (
     <>
       <div
-        className={`container relative min-h-screen w-screen flex flex-col items-center justify-between bg-cover bg-center transition-opacity duration-500 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}
+        className={`container relative h-dvh w-screen flex flex-col items-center justify-between bg-cover bg-center transition-opacity duration-500 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Navigation Bar */}
