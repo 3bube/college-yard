@@ -6,6 +6,7 @@ import Login from "./Login.jsx";
 import CreateAccount from "./CreateAccount.jsx";
 import ConfirmationPage from "./ConfirmationPage.jsx";
 import CreatePassword from "./CreatePassword.jsx";
+import Home from "./Home/HomePage/Home.jsx";
 const Onboarding = lazy(() => import('./Onboarding.jsx'));
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="create-account" element={<CreateAccount />} />
         <Route path="confirmation" element={<ConfirmationPage />}/>
         <Route path="create-password" element={<CreatePassword />}/>
+        <Route path="home" element={<Home />}/>
         {/* Add other routes here */}
       </Routes>
     </Suspense>
