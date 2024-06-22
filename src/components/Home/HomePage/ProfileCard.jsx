@@ -1,11 +1,10 @@
 import profilePic from '/profilepic.png';
-import logo from '/logo2.png';
+
 
 const ProfileCard = () =>{
 
     return(
         <div className="p-4 flex flex-col items-center">
-        <img src={logo} alt="Logo" className="h-6 mb-4" /> {/* Add path to your logo */}
         <div className="bg-black rounded-lg p-4 w-full max-w-md ">
           <div className="flex justify-between">
             <div className='flex'>
