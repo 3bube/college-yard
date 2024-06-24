@@ -1,6 +1,7 @@
 // src/components/ListingCard.js
 import React from "react";
 import { FaWifi, FaUtensils, FaUserFriends, FaBusAlt,  FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa'; // Example icons from react-icons
+import { useNavigate } from 'react-router-dom';
 import image from '/pexels-expect-best-323780 2.png';
 
 const getAmenityIcon = (amenity) => {
@@ -17,6 +18,8 @@ const getAmenityIcon = (amenity) => {
       return null;
   }
 };
+
+
 
 const renderStars = (rating) => {
   const stars = [];
@@ -39,9 +42,16 @@ const renderStars = (rating) => {
 };
 
 const ListingCard = ({ title, price, location, distance, amenities, imageUrl, rating }) => {
+  const navigate = useNavigate();
+
+const handleClick = () => {
+  navigate('/listing-details', { state: { title, price, location, distance, amenities, imageUrl, rating } });
+};
+
   return (
     <div
-      className="relative bg-cover bg-center rounded-lg shadow-md overflow-hidden h-96"
+      className="relative bg-cover bg-center rounded-lg shadow-md overflow-hidden h-96 cursor-pointer" 
+      onClick={handleClick}
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center justify-end p-4">
@@ -49,7 +59,7 @@ const ListingCard = ({ title, price, location, distance, amenities, imageUrl, ra
           {renderStars(rating)}
           <span className="ml-2 text-white">{rating}</span>
         </div>
-        <h3 className="text-3xl font-bold text-white w-[213px]">{title}</h3>
+        <a className="text-3xl font-bold text-white w-[213px] hover:underline">{title}</a>
         <div className="flex flex-col py-4">
           <p className="bg-white text-black w-[150px] text-center font-medium">
             LOWEST PRICE

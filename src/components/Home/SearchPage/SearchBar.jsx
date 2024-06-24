@@ -20,8 +20,8 @@ const SearchBar = ({ onSearch, onToggleFilters, isFiltersActive }) => {
   };
 
   return (
-    <div className="flex items-center bg-black p-2 rounded outline ">
-      <div className="relative w-full">
+    <div className="flex items-center bg-black rounded outline w-9/12">
+      <div className="relative">
         <input
           type="text"
           placeholder="Search..."

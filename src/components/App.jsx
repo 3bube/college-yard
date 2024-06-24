@@ -7,8 +7,9 @@ import CreateAccount from "./CreateAccount.jsx";
 import ConfirmationPage from "./ConfirmationPage.jsx";
 import CreatePassword from "./CreatePassword.jsx";
 import Home from "./Home/HomePage/Home.jsx";
-import Search from "./Home/SearchPage/MyStayPage/Search.jsx";
+import Search from "./Home/SearchPage/Search.jsx";
 import MainLayout from "./Home/MainLayout.jsx";
+import ListingDetails from "./Home/SearchPage/ListingComponents/ListingDetails.jsx";
 const Onboarding = lazy(() => import('./Onboarding.jsx'));
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="create-password" element={<CreatePassword />}/>
         <Route path="home" element={<MainLayout><Home /></MainLayout>} />     
         <Route path="search" element={<MainLayout><Search/></MainLayout>}/>
+        <Route path="listing-details" element={<ListingDetails/>}/>
         {/* Add other routes here */}
       </Routes>
     </Suspense>

@@ -1,14 +1,14 @@
 // src/components/Search.js
 import React, { useState } from 'react';
-import SearchBar from '../SearchBar';
+import SearchBar from './SearchBar';
 import SearchFilters from './SearchFilters';
-import ListingCard from '../ListingCard';
+import ListingCard from './ListingComponents/ListingCard';
 
 const allListings = [
   {
     title: "Wrace-Hall Maitama Ext.",
     price: "1.5M",
-    location: "Maitama Avenue, Abuja, Federal Capital Territory",
+    location: "Maitama Avenue, Abuja, FCT",
     distance: "35 Minutes",
     amenities: ["1-4 Person", "WiFi", "Food", "Bus"],
     imageUrl: '/pexels-expect-best-323780 2.png',
