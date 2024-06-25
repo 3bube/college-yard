@@ -3,6 +3,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import ListingDetailsCard from './ListingDetailsCard';
 import AmenityLogos from './AmenityLogos';
 import RoomTypesCard from './RoomTypesCard';
+import FacilitiesCard from './FacilitiesCard';
+import AmenitiesCard from './AmenitiesCard';
+import SeeReviewsCard from './SeeReviewsCard';
+import ContactManagerCard from './ContactManagerCard';
 
 const ListingDetails = () => {
   const location = useLocation();
@@ -33,6 +37,10 @@ const ListingDetails = () => {
       amenities={amenities}
       />
       <RoomTypesCard />
+      <FacilitiesCard />
+      <AmenitiesCard />
+      <SeeReviewsCard />
+      <ContactManagerCard />
     </div>
   );
 };
