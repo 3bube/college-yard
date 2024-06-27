@@ -18,3 +18,37 @@ export const reviewsData = [
     // Add more reviews as needed
   ];
   
+
+// listings.js
+
+export const allListings = [
+  {
+      id: 1,
+      title: "Wrace-Hall Maitama Ext.",
+      price: "1.5M",
+      location: "Maitama Avenue, Abuja, FCT",
+      distance: "35 Minutes",
+      amenities: ["1-4 Person", "WiFi", "Food", "Bus"],
+      imageUrl: '/pexels-expect-best-323780 2.png',
+      rating: 4.5,
+      school: 'Baze Univeristy',
+  },
+
+  {
+    id: 2,
+    title: "Premium Leather Backpack",
+    price: "1.5M",
+    location: "Gwarinpa Estate, Abuja, FCT",
+    distance: "35 Minutes",
+    amenities: ["1-4 Person", "WiFi", "Food", "Bus"],
+    imageUrl: '/pexels-expect-best-323780 2.png',
+    rating: 4.8,
+    school: 'Baze Univeristy',
+},
+
+  // Add more listings as needed
+];
+
+
+
+// AIzaSyCbaWuoUFFG74e63HulZMcQPkyEuAqN-Ww

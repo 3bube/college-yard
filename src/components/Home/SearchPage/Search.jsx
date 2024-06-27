@@ -1,21 +1,9 @@
-// src/components/Search.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import SearchFilters from './SearchFilters';
 import ListingCard from './ListingComponents/ListingCard';
+import { allListings } from './ListingComponents/DummyData';
 
-const allListings = [
-  {
-    title: "Wrace-Hall Maitama Ext.",
-    price: "1.5M",
-    location: "Maitama Avenue, Abuja, FCT",
-    distance: "35 Minutes",
-    amenities: ["1-4 Person", "WiFi", "Food", "Bus"],
-    imageUrl: '/pexels-expect-best-323780 2.png',
-    rating: 4.5
-  },
-
-];
 
 const Search = () => {
   const [isFiltersActive, setIsFiltersActive] = useState(false);
@@ -34,14 +22,17 @@ const Search = () => {
     setFiltersVisible(!filtersVisible);
     setIsFiltersActive(!isFiltersActive);
   };
+  
+
+
 
   return (
     <div className="min-h-screen bg-black text-white">
       <div className='flex items-center justify-center mb-3'><SearchBar onSearch={handleSearch} onToggleFilters={toggleFilters} /></div>
       {filtersVisible && <SearchFilters />}
-      <div className="p-4">
-        {listings.map((listing, index) => (
-          <ListingCard key={index} {...listing} />
+      <div className="p-4 flex flex-col space-y-4">
+        {listings.map((listing, id) => (
+          <ListingCard key={id} {...listing} />
         ))}
       </div>
     </div>

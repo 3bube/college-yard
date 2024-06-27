@@ -10,6 +10,8 @@ import Home from "./Home/HomePage/Home.jsx";
 import Search from "./Home/SearchPage/Search.jsx";
 import MainLayout from "./Home/MainLayout.jsx";
 import ListingDetails from "./Home/SearchPage/ListingComponents/ListingDetails.jsx";
+import ListingMap from "./Home/SearchPage/ListingComponents/ListingMap.jsx"
+import ListingDetailsCard from "./Home/SearchPage/ListingComponents/ListingDetailsCard.jsx";
 const Onboarding = lazy(() => import('./Onboarding.jsx'));
 
 const App = () => {
@@ -26,6 +28,8 @@ const App = () => {
         <Route path="home" element={<MainLayout><Home /></MainLayout>} />     
         <Route path="search" element={<MainLayout><Search/></MainLayout>}/>
         <Route path="listing-details" element={<ListingDetails/>}/>
+        <Route path="listing-card" element={<ListingDetailsCard/>}/>
+        <Route path="listing-map" element={ <ListingMap />} />
         {/* Add other routes here */}
       </Routes>
     </Suspense>
