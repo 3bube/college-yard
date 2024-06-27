@@ -12,6 +12,7 @@ import MainLayout from "./Home/MainLayout.jsx";
 import ListingDetails from "./Home/SearchPage/ListingComponents/ListingDetails.jsx";
 import ListingMap from "./Home/SearchPage/ListingComponents/ListingMap.jsx"
 import ListingDetailsCard from "./Home/SearchPage/ListingComponents/ListingDetailsCard.jsx";
+import RoomDetails from "./Home/SearchPage/ListingComponents/RoomDetails.jsx";
 const Onboarding = lazy(() => import('./Onboarding.jsx'));
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="listing-details" element={<ListingDetails/>}/>
         <Route path="listing-card" element={<ListingDetailsCard/>}/>
         <Route path="listing-map" element={ <ListingMap />} />
+        <Route path="room-details/:id" element={ <RoomDetails />} />
         {/* Add other routes here */}
       </Routes>
     </Suspense>

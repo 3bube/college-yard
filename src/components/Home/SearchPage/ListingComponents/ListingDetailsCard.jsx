@@ -19,7 +19,7 @@ const ListingDetailsCard = ({
   };
 
   return (
-    <section className="relative rounded-lg flex flex-col justify-center min-[375px]:mt-4 mt-10 w-full max-w-2xl" data-v0-t="card">
+    <div className="relative rounded-lg flex flex-col justify-center min-[375px]:mt-4 mt-10 w-full max-w-2xl" data-v0-t="card">
       <div className="z-10 overflow-hidden w-full aspect-ratio p-2">
         <img className="w-full" src={propImageUrl} alt="" />
         <div className="mt-[-1rem] ml-8 p-0">
@@ -62,7 +62,7 @@ const ListingDetailsCard = ({
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

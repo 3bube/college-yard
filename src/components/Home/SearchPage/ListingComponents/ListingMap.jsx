@@ -173,7 +173,7 @@ const ListingMap = () => {
       <div>
       <GoogleMap
         center={mapCenter}
-        zoom={16}
+        zoom={22}
         options={mapOptions}
         mapContainerStyle={{ width: '100%', height: '600px', borderRadius: '1rem' }}
       >
